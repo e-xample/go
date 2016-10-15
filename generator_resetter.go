@@ -18,7 +18,7 @@ func main() {
         fmt.Println(g1())
     }
     r1()
-    for i := 0; i > 8; i++ {
+    for i := 0; i < 8; i++ {
         fmt.Println(g1())
     }
 }
