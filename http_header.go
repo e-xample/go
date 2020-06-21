@@ -2,11 +2,15 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	contentType := r.Header.Get("Content-Type")
+	fmt.Fprintln(w, contentType)
+
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 
 	v := struct {
